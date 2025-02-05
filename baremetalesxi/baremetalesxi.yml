@@ -50,7 +50,7 @@
             idrac_ip: "{{ idrac_ip }}"
             idrac_user: "{{ idrac_username }}"
             idrac_password: "{{ idrac_password }}"
-            share_name: "192.168.170.254:/volume3/Infra-Test/ansible"
+            share_name: "192.168.170.254:/volume3/Infra-Test/baremetalesxi"
             iso_image: "{{ inventory_hostname.split('.')[0] }}.iso"
             expose_duration: 10
           delegate_to: localhost
