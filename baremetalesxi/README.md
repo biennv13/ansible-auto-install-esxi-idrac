@@ -11,3 +11,6 @@ If you use a different install ISO you have to:
 1. Extract `boot.cfg` or `efi/boot/boot.cfg` from it (they seem to be identical, at least in the ISO I'm using)
 1. Copy it to `files/`
 1. Change `kernelopt=cdromBoot runweasel` to `kernelopt=runweasel ks=cdrom:/KS.CFG`
+
+Git Clone repo to mount point NFS 
+I use NFS **192.168.170.254:/volume3/Infra-Test/**
