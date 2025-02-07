@@ -50,6 +50,15 @@
 
 ### OPTION 1: Install by module idrac_os_deployment, module use Lifecycle Controler insall OS from ISO on NFS
 ## Luu ý: option này sẽ tự động restart và boot vào file ISO được chỉ định nên cẩn thận nhầm IDRAC
+## Nếu chạy job này lỗi "lc is not ready" thì chạy thêm job reset idrac 
+
+        # - name: Reset iDRAC
+        #   dellemc.openmanage.idrac_reset:
+        #     validate_certs: false
+        #     idrac_ip: "{{ idrac_ip }}"
+        #     idrac_user: "{{ idrac_username }}"
+        #     idrac_password: "{{ idrac_password }}"
+        #     wait_for_idrac: true
         - name: Boot to Network ISO 
           dellemc.openmanage.idrac_os_deployment:
             validate_certs: false
